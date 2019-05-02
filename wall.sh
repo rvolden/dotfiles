@@ -2,6 +2,6 @@
 
 while true
 do
-    feh --bg-fill --randomize /home/rvolden/Pictures/hollowKnight/*
+    feh --bg-fill --randomize ~/Pictures/hollowKnight/*
     sleep 600
 done

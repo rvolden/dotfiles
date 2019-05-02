@@ -2,7 +2,7 @@
 
 import os
 
-xinput_list = '/home/rvolden/.config/i3/inputs'
+xinput_list = '~/.config/i3/inputs'
 os.system('xinput list >{0}'.format(xinput_list))
 for line in open(xinput_list):
     line = line.rstrip()

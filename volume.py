@@ -2,7 +2,7 @@
 
 import os, sys
 
-sinks = '/home/rvolden/.config/i3/sinks'
+sinks = '~/.config/i3/sinks'
 os.system('pactl list sinks >{0}'.format(sinks))
 action = sys.argv[1]
 
