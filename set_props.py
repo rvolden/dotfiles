@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 
 import os
+from os.path import expanduser as eu
 
-xinput_list = '~/.config/i3/inputs'
+xinput_list = eu('~/.config/i3/inputs')
 os.system('xinput list >{0}'.format(xinput_list))
 for line in open(xinput_list):
     line = line.rstrip()

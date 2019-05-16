@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 
 import os, sys
+from os.path import expanduser as eu
 
-sinks = '~/.config/i3/sinks'
+sinks = eu('~/.config/i3/sinks')
 os.system('pactl list sinks >{0}'.format(sinks))
 action = sys.argv[1]
 

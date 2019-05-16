@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 
 import os
+from os.path import expanduser as eu
 
-display_list = '~/.config/i3/displays'
-last_external = '~/.config/i3/last_ext'
-lid = '~/.config/i3/lid'
+display_list = eu('~/.config/i3/displays')
+last_external = eu('~/.config/i3/last_ext')
+lid = eu('~/.config/i3/lid')
 
 os.system('xrandr >{0}'.format(display_list))
 os.system('cat /proc/acpi/button/lid/LID0/state >{0}'.format(lid))
@@ -32,6 +33,10 @@ for line in open(display_list):
         elif lid_open and resolution == '3440x1440':
             os.system('xrandr --output eDP1 --auto --pos 0x1440 --output {0} --auto --pos 1080x0'.format(id))
             print('xrandr --output eDP1 --auto --pos 0x1440 --output {0} --auto --pos 1080x0'.format(id))
+            os.system('touch {0}'.format(last_external))
+        elif lid_open and resolution == '2560x1440':
+            os.system('xrandr --output eDP1 --auto --pos 0x1440 --output {0} --auto --pos 1920x0'.format(id))
+            print('xrandr --output eDP1 --auto --pos 0x1440 --output {0} --auto --pos 1920x0'.format(id))
             os.system('touch {0}'.format(last_external))
         else:
             os.system('xrandr --output eDP1 --off --output {0} --auto --pos 0x1080'.format(id))
