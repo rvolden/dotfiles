@@ -38,8 +38,18 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
+Plug 'airblade/vim-gitgutter'
+Plug 'thaerkh/vim-indentguides'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'kshenoy/vim-signature'
 
 call plug#end()
+
+set updatetime=100
+set listchars=""
+let g:indentguides_tabchar = '|'
+let g:indentguides_spacechar = '|'
 
 let g:airline_symbols = get(g:,'airline_symbols',{})
 "let g:airline_symbols.whitespace=' '
