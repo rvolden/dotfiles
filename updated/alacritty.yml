@@ -1,0 +1,58 @@
+font:
+    normal:
+      family: Input Mono
+      style: Regular
+
+    bold:
+      family: Input Mono
+      style: Bold
+
+    italic:
+      family: Input Mono
+      style: Italic
+
+    bold_italic:
+      family: Input Mono
+      style: Bold Italic
+
+    size: 11
+
+# Colors (Oceanic Next)
+colors:
+  # Default colors
+  primary:
+    background: '#1c1c1c'
+    foreground: '#d8dee9'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '#1b2b34'
+    cursor: '#ffffff'
+
+  # Normal colors
+  normal:
+    black:   '#343d46'
+    red:     '#EC5f67'
+    green:   '#99C794'
+    yellow:  '#FAC863'
+    # blue:    '#6699cc'
+    blue:    '#1E88E5'
+    magenta: '#c594c5'
+    cyan:    '#5fb3b3'
+    white:   '#d8dee9'
+
+  # Bright colors
+  bright:
+    black:   '#343d46'
+    red:     '#EC5f67'
+    green:   '#99C794'
+    yellow:  '#FAC863'
+    blue:    '#6699cc'
+    magenta: '#c594c5'
+    cyan:    '#5fb3b3'
+    white:   '#d8dee9'
+
+scrolling:
+  history: 100000
+
+TERM: xterm-256color
